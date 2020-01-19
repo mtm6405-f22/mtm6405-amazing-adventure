@@ -10,16 +10,18 @@ The following requirement must be met in order to complete the assignment succes
 2. Convert the **index.html** file to be a PHP file.
     1. Update the file extension
     2. Uses the provide HTML as a template
-3. Design the maze on paper or using graphics program. 
-    1. The maze should contain a minimum of 9 rooms
-    2. There must be at least one way out of the maze
-4. Provide comments and pseudo code on how to solve the problem, what methods will be used, and why.
-5. Use an associative array to create each room
-    1. Each room should include a description
-    2. Each room should include the available actions
-6. Each rooms description will be displayed inside `<div class="response"></div>`
-7. Each action will displayed in the actions `<div class="actions"></div>` as link to another room
-    1. Use URL variables to *move* to another room
+3. Review the provided maze (maze.pdf) 
+    1. The maze contains 9 rooms
+    2. The arrows indicate entrances and exits into each room. Entering one room does not guarantee that you can return the way you came.
+4. Create an multi-dimensional, associative array for the maze
+    1. Each room should be represented as an array 
+    2. Each room should include a description
+    3. Each room should include a list of available actions
+5. Each room's description will be displayed inside `<div class="response"></div>`
+6. Each action will displayed inside `<div class="actions"></div>` as link to another room
+    1. Use URL variables to pass the room key
+    2. Use the `$_GET` variable to retrieve the room from the maze array
+    3. Display the new room's description and actions
 
 ## Example
 A completed version of the assignment can be found at the following:
