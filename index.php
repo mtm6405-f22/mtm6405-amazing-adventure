@@ -71,6 +71,12 @@
       ]
     ] 
   ];
+if (isset($_GET["room"]) && isset($room[$_GET["room"]])) {
+}
+else {
+  $room = $rooms["Room 1"];
+
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -82,12 +88,15 @@
   <link rel="stylesheet" href="adventure.css">
 </head>
 <body>
-  <div class="response">You are in the Library</div>
-  <div class="actions">
-    <a href="#" class="action">North</a>
-    <a href="#" class="action">South</a>
-    <a href="#" class="action">East</a>
-    <a href="#" class="action">West</a>
-  </div>
+  <div class="response">
+  <?php echo $room["description"]; ?>
+</div>
+<div class="actions">
+  <?php foreach ($room["actions"] as $r => $d): ?>
+  <a href="?room=<?php echo $r; ?>" class="action"
+    <?php echo $d; ?>
+  </a>
+  <?php
+dforeach; ?>
 </body>
 </html>
